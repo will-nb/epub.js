@@ -45,12 +45,14 @@ module.exports = {
 	resolve: {
 		alias: {
 			path: "path-webpack"
+		},
+		fallback: {
+			"xmldom": require.resolve("xmldom")
 		}
 	},
 	devServer: {
 		host: hostname,
 		port: port,
-		inline: true,
 		headers: {
 			"Access-Control-Allow-Origin": "*",
 			"Access-Control-Allow-Methods": "GET,PUT,POST,DELETE",
